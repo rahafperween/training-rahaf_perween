@@ -1,0 +1,49 @@
+*{
+    margin: 3px;
+    padding: 3px;
+}
+#table1{
+    align-content: center;
+    width: 1070;
+    
+}
+
+#first1{
+    background-color: lightgray;
+    width: 350px;
+    height: 300px;
+}
+
+#first11{
+ background-color: lightgray;
+ width: 100%;
+ height: 200px;
+}
+
+ #first2{
+    background-color: lightgray;
+    text-align: right;
+    width: 300px;
+    height: 300px;
+ }
+
+ #myIMG{
+    border: 5px solid rgb(78, 129, 1);
+ }
+
+ #tablelast #tablelastrow #tablelastcol{ 
+border: 1px solid black; 
+}
+
+ #tablelast{
+    border-collapse: collapse;
+    width: 100%;
+ }
+#tablelastcol{
+    text-align: center;
+}
+
+#tablelastrow #tablelastcol{
+    padding: 15px;
+    text-align: center;
+}
