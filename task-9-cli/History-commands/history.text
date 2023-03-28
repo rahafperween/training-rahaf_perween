@@ -1,0 +1,42 @@
+(base) rahafperween@Rahafs-MacBook-Air History-commands % cd appfoster-ase-training
+(base) rahafperween@Rahafs-MacBook-Air History-commands % mkdir task-9-cli
+(base) rahafperween@Rahafs-MacBook-Air History-commands % mkdir Command
+(base) rahafperween@Rahafs-MacBook-Air History-commands % touch command1.txt
+(base) rahafperween@Rahafs-MacBook-Air History-commands % mkdir History-commands
+(base) rahafperween@Rahafs-MacBook-Air History-commands % copy command1.txt History-commands
+(base) rahafperween@Rahafs-MacBook-Air History-commands % move command1.txt Command
+(base) rahafperween@Rahafs-MacBook-Air History-commands % cd command
+(base) rahafperween@Rahafs-MacBook-Air History-commands % ren command1.txt command2.txt
+(base) rahafperween@Rahafs-MacBook-Air History-commands % move command2.txt task-9-cli
+ren 1. What did you work on? 
+Started task 8.
+2. What is your plan for today?
+complete task-8
+3. Are there any roadblocks in your way?
+ren task-9-cli command2.txt
+(base) rahafperween@Rahafs-MacBook-Air History-commands % copy command2.txt task-9-cli
+(base) rahafperween@Rahafs-MacBook-Air History-commands % dir task-9-cli
+(base) rahafperween@Rahafs-MacBook-Air History-commands % cd ..
+(base) rahafperween@Rahafs-MacBook-Air History-commands % dir task-9-cli
+(base) rahafperween@Rahafs-MacBook-Air History-commands % cd ..
+(base) rahafperween@Rahafs-MacBook-Air History-commands % dir task-9-cli
+(base) rahafperween@Rahafs-MacBook-Air History-commands % cd task-9-cli
+(base) rahafperween@Rahafs-MacBook-Air History-commands % move command2.txt history-commands
+ (base) rahafperween@Rahafs-MacBook-Air History-commands % cd command
+(base) rahafperween@Rahafs-MacBook-Air History-commands % move command2.txt history-commands
+(base) rahafperween@Rahafs-MacBook-Air History-commands % doskey/history
+(base) rahafperween@Rahafs-MacBook-Air History-commands % cd ..
+(base) rahafperween@Rahafs-MacBook-Air History-commands % cd history commands
+(base) rahafperween@Rahafs-MacBook-Air History-commands % cd history-commands
+(base) rahafperween@Rahafs-MacBook-Air History-commands % doskey/history>command1.txt
+(base) rahafperween@Rahafs-MacBook-Air History-commands % cd ..
+(base) rahafperween@Rahafs-MacBook-Air History-commands % doskey/history
+(base) rahafperween@Rahafs-MacBook-Air History-commands % tree/f
+(base) rahafperween@Rahafs-MacBook-Air History-commands % doskey/history
+(base) rahafperween@Rahafs-MacBook-Air History-commands % cd task-9-cli
+(base) rahafperween@Rahafs-MacBook-Air History-commands % rmdir /s command
+y
+(base) rahafperween@Rahafs-MacBook-Air History-commands % cd history-commands
+(base) rahafperween@Rahafs-MacBook-Air History-commands % move command1.txt task-9-cli
+(base) rahafperween@Rahafs-MacBook-Air History-commands % ren task-9-cli command1.txt
+(base) rahafperween@Rahafs-MacBook-Air History-commands % doskey/history>command1.txt
