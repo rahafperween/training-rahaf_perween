@@ -1,6 +1,9 @@
 *{
     margin: 3px;
     padding: 3px;
+    margin-top: 2px;
+    padding-top: 2px;
+    /* align-content: ; */
 }
 #table1{
     align-content: center;
@@ -23,7 +26,7 @@
  #first2{
     background-color: lightgray;
     text-align: right;
-    width: 300px;
+    width: 3560px;
     height: 300px;
  }
 
@@ -47,3 +50,20 @@ border: 1px solid black;
     padding: 15px;
     text-align: center;
 }
+ul {
+    list-style: none; /* Remove default bullets */
+  }
+  
+  ul li::before {
+    
+    content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    color: green; /* Change the color */
+    font-weight: bold; /* If you want it to be bold */
+    display: inline-block; /* Needed to add space between the bullet and the text */
+    width: 1em; /* Also needed for space (tweak if needed) */
+    margin-left: -1em; /* Also needed for space (tweak if needed) */
+  }
+  *{
+    margin-top: 0px;
+    padding-top: 0px;
+  }
