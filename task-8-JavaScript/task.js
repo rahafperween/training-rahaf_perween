@@ -2,23 +2,29 @@ const splitBtn = document.getElementById("splitBtn");
 const inputNumber = document.getElementById("number");
 const numberOfSplits = document.getElementById("splits");
 const resultContainer = document.getElementById("container");
-function getRandomColor()
-{
+
+function getRandomColor() {
     const letters = "0123456789ABCDEF";
     let hex = "#";
-    for (let i = 0; i < 6; i++)
-    {
+    for (let i = 0; i < 6; i++) {
         hex += letters[Math.floor(Math.random() * 15)
         ];
     }
     return hex;
 }
-function splitno() {
+
+function split() {
+    resultContainer.textContent="";
     const number = inputNumber.value;
     const splits = numberOfSplits.value;
+    if(splits<0){
+        const p = document.createElement("p");
+        p.textContent="Invalid number of splits";
+        p.classList.add("error");
+        resultContainer.append(p);
+    }
     let remaining = number;
-    for (let i = 0; i < splits; i++)
-    {
+    for (let i = 0; i < splits; i++) {
         const width = Math.ceil(remaining / (splits - i));
         const div = document.createElement("div");
         div.classList.add("split");
@@ -31,4 +37,4 @@ function splitno() {
     inputNumber.value = "";
     numberOfSplits.value = "";
 }
-splitBtn.addEventListener("click", splitno);
+splitBtn.addEventListener("click", split);
