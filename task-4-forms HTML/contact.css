@@ -1,6 +1,9 @@
 .row{
-    display: inline-flexbox;
-    flex-direction: row;
+    border: 1px solid #000;
+        width: auto;
+        overflow: auto;
+        white-space: nowrap;
+        height: fit-content;
 }
 .column{
     display: flex;
