@@ -1,47 +1,5 @@
-.pic{
-  border-radius:50%;
-}
-.main-container{
-  background-color: #fafafa;
-  border-top-right-radius: 40px;
-  padding: 20px;
-}
-.item{
-  border-radius: 15px;
-  height: 160px;
-  width: 200px;
-  padding: 2px;
-  margin:5px
-}
-.small-item{
-  border-radius: 30px;
-  height: 20px;
-  width: 70px;
-  margin: 5px;
-  background-color: white;
-}
-.search-field {
-  width: 450px;
-  padding: 10px 35px 10px 35px;
-  border: none;
-  border-radius: 100px;
-  outline: none;
-}
-.search-button {
-  background: transparent;
-  border: none;
-  outline: none;
-}
-.search-button img {
-  width: 20px;
-  height: 20px;
-  object-fit: cover;
-}
-.class-container{
-  background-size: cover;
-}
-.list{
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
+.vert:hover{
+  background-color: #1f2e47;
+  color: #fff !important;
+  border-radius: 25px;
 }
