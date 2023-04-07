@@ -17,6 +17,17 @@ function split() {
     resultContainer.textContent="";
     const number = inputNumber.value;
     const splits = numberOfSplits.value;
+    
+    if(splits>number)
+    {
+        const b=document.createElement("b");
+        b.textContent="No of Splits should not be greater than the no";
+        b.classList.add("error");
+        resultContainer.append(b);
+        return;
+        
+    }
+
     if(splits<0){
         const p = document.createElement("p");
         p.textContent="Invalid number of splits";
