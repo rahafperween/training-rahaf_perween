@@ -63,37 +63,39 @@
           
         </div>
         <div class="" id="modal-data-create-btn"></div>
-        <!-- <button type="button" class="btn btn-secondary"  onClick="handleClickPut(values.id)">Close</button> -->
+          <!-- <button type="button" class="btn btn-secondary"  onClick="handleClickPut(values.id)">Close</button> -->
 
           
+        </div>
+        <!-- <div class="" id="modal-data-add-btn"></div> -->
+        
+      </div>
     </div>
-    <!-- <div class="" id="modal-data-add-btn"></div> -->
-    
   </div>
-</div>
-</div>
-<a href="http://localhost:3000/host/users"><button style="width: 100px; background-color: blue; border-radius: 10%;" ><i class="fa-solid fa-arrow-rotate-left"></i>Back</button></a>
+  <a href="http://localhost:3002/host/users"><button style="width: 100px; background-color: blue; border-radius: 10%;" ><i class="fa-solid fa-arrow-rotate-left"></i>Back</button></a>
 </main>
 <script>
-let AllData = {}
-let url = window.location.href;
+  let AllData = {}
+  let url = window.location.href;
 console.log('---url--'+url);
-let projectId = url?.split('?')[1];
-console.log('---projectId--'+projectId);
+ let projectId = url?.split('?')[1];
 
-let fetchEndPoint = projectId != undefined ? `http://localhost:3000/api/projects/${projectId}` : 'http://localhost:3000/api/projects'
-fetch(fetchEndPoint).then((data)=>{
-//console.log(data);
-return data.json(); // Converted to object
-}).then((objectData)=>{
-//   console.log(objectData[0]);
-let tableData="";
-AllData = objectData;
-objectData.map((values)=>{
-    tableData +=`<tr class="text-center">
+ console.log('---projectId--'+projectId);
     
-    <td class="text-center">${values.Projects}</td>
-    <td class="text-center"><button type="button" class="btn btn-primary"  onClick="handleClick(${values.id})">Delete<i class="fa-sharp fa-solid fa-trash"></i></button></td>
+let fetchEndPoint = projectId != undefined ? `http://localhost:3002/api/projects/${projectId}` : 'http://localhost:3002/api/projects'
+
+fetch(fetchEndPoint).then((data)=>{
+    //console.log(data);
+    return data.json(); // Converted to object
+}).then((objectData)=>{
+ //   console.log(objectData[0]);
+    let tableData="";
+    AllData = objectData;
+    objectData.map((values)=>{
+        tableData +=`<tr class="text-center">
+        
+        <td class="text-center">${values.Projects}</td>
+        <td class="text-center"><button type="button" class="btn btn-primary"  onClick="handleClick(${values.id})">Delete<i class="fa-sharp fa-solid fa-trash"></i></button></td>
         <td class="text-center"><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" onClick="handleClickModal(${values.id})" >Edit<i class="fa-solid fa-user-pen"></i></button></td>
         
       </tr>`;
@@ -103,8 +105,9 @@ objectData.map((values)=>{
 }).catch((error)=>{
     console.log(error);
 });
+
 handleClick=(recordId)=>{
-  fetch(`http://localhost:3000/api/projects/${recordId}`, {
+  fetch(`http://localhost:3002/api/projects/${recordId}`, {
       method: 'Delete',
       headers: {
         "Content-Type": "application/json",
@@ -123,16 +126,18 @@ handleClick=(recordId)=>{
       });
 }
 handleClickModal=(ValueId)=>{
-    document.getElementById('modal-data-create-btn').style.display = 'none';
+  document.getElementById('modal-data-create-btn').style.display = 'none';
   document.getElementById('modal-data-edit-btn').style.display = 'block';
 let showData = `<div>
               <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onClick="handleClickModalEdited(${ValueId})">Update</button>
             </div>`
+
             console.log(showData);
     document.getElementById("modal-data-edit-btn").innerHTML=showData;
 } 
+
 handleClickModalEdited=(recordId)=>{
-  fetch(`http://localhost:3000/api/projects/${recordId}`, {
+  fetch(`http://localhost:3002/api/projects/${recordId}`, {
       method: 'Put',
       headers: {
         "Content-Type": "application/json",
@@ -153,20 +158,23 @@ handleClickModalEdited=(recordId)=>{
         console.log(error);
       });
 }
+
 handleClickModalAdd=(ValueIds)=>{
   document.getElementById('modal-data-edit-btn').style.display = 'none';
 let showData = `<div>
               <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onClick="handleClickModalAdded()">Create</button>
             </div>`
+
             console.log(showData);
             document.getElementById('modal-data-create-btn').style.display = 'block';
     document.getElementById("modal-data-create-btn").innerHTML=showData;
 } 
+
 handleClickModalAdded=()=>{
   let url = window.location.href;
 console.log('---url--'+url);
  let projectId = url?.split('?')[1];
-  fetch(`http://localhost:3000/api/projects/${projectId}`, {
+  fetch(`http://localhost:3002/api/projects/${projectId}`, {
       method: 'Post',
       headers: {
         "Content-Type": "application/json",
@@ -190,5 +198,6 @@ console.log('---url--'+url);
 <footer>
   <%- include('../partials/footer'); %>
 </footer>
+
 </body>
 </html>

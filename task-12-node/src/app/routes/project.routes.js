@@ -1,29 +1,31 @@
 module.exports = app => {
     const projects = require("../controllers/project.controller.js");
-  
+
     var router = require("express").Router();
-  
-    // Create a new Project
+    // Create a new User
+    // router.delete("/users1", users.projects);
+
     router.post("/", projects.create);
 
-    // Delete a Project with id
-    router.delete("/:id", projects.delete);
+    router.get('/', projects.findAll);
+    router.get('/:id', projects.findOne);
+   
+   //router.delete("/", projects.deleteAll);
+    // Retrieve all Users
+    // router.get("/", users.findAll);
+  
+    // // Retrieve a single User with id
+    // router.get("/:id", users.findOne);
+  
+    // // Update a User with id
+     router.put("/:id", projects.update);
+  
+    // // Delete a User with id
+     router.delete("/:id", projects.delete);
+  
+    // // Delete all Users
+    // router.delete("/", users.deleteAll);
 
-    // Update a Project with id
-    router.put("/:id", projects.update);
-  
-    // Retrieve all Projects
-    router.get("/", projects.showAll);
-  
-    // Retrieve a single Project with id
-    router.get("/:id", projects.findOne);
-  
-    // Delete all Projects
-    router.delete("/", projects.deleteAll);
-  
+    router.post("/:id",projects.create);
     app.use('/api/projects', router);
-  
-    // Get all projects for a user
-    app.get("/api/users/:userId/projects", projects.findAllByUser);
   };
-  

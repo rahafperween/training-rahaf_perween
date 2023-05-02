@@ -19,7 +19,6 @@ exports.create = (req, res) => {
     published: req.body.published ? req.body.published : false
   };
 
-
   // Save Tutorial in the database
   Tutorial.create(tutorial)
     .then(data => {
@@ -32,7 +31,6 @@ exports.create = (req, res) => {
       });
     });
 };
-  
 
 // Retrieve all Tutorials from the database.
 exports.findAll = (req, res) => {
