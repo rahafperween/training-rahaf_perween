@@ -14,43 +14,43 @@ module.exports = {
     */
     return queryInterface.bulkInsert('users',[
       {
-        name:"Amit",
+        name:"Rohan",
         ProjectId:"1",
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
-        name:"Aman Dantarwall",
+        name:"Arya Stark",
         ProjectId:"2",
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
-        name:"rohan",
+        name:"Professor",
         ProjectId:"3",
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
-        name:"anu",
+        name:"Ragnarson",
         ProjectId:"4",
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
-        name:"Jonny Ray",
+        name:"Jhon Wick",
         ProjectId:"5",
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
-        name:"lilly",
+        name:"Jhon Snow",
         ProjectId:"6",
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
-        name:"ram",
+        name:"Jhon Cena",
         ProjectId:"7",
         createdAt: new Date(),
         updatedAt: new Date()

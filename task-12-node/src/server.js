@@ -37,10 +37,10 @@ db.sequelize.sync()
     res.render('pages/index');
   });
 
-  app.get('/host/users', (req, res) => {
+  app.get('/users', (req, res) => {
     res.render('pages/users');
   })
-  app.get('/host/user/:userId/projects', (req, res) => {
+  app.get('/user/projects', (req, res) => {
     res.render('pages/projects');
   })
   
@@ -48,7 +48,7 @@ require("./app/routes/tutorial.routes")(app);
 require("./app/routes/user.routes")(app);
 require("./app/routes/project.routes")(app);
 // set port, listen for requests
-const PORT = 3003;
+const PORT =3001;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}.`);
 });

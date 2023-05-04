@@ -20,7 +20,7 @@ module.exports = {
         updatedAt: new Date()
       },
       {
-        Projects:"back-end",
+        Projects:"Testing",
         ProjectId:"1",
         createdAt: new Date(),
         updatedAt: new Date()
@@ -32,7 +32,7 @@ module.exports = {
         updatedAt: new Date()
       },
       {
-        Projects:"Architecture",
+        Projects:"Support",
         ProjectId:"3",
         createdAt: new Date(),
         updatedAt: new Date()
@@ -44,13 +44,13 @@ module.exports = {
         updatedAt: new Date()
       },
       {
-        Projects:"Data Analyst",
+        Projects:"Testing",
         ProjectId:"4",
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
-        Projects:"Full Stack",
+        Projects:"API",
         ProjectId:"5",
         createdAt: new Date(),
         updatedAt: new Date()

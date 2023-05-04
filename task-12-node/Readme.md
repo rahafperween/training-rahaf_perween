@@ -5,7 +5,7 @@ The `project` bash script allows you to run some project related commands easily
 
 The application is run through docker container but for this project you would mostly need access to node/npm and the database. 
 
-To make sure `project` script is executable run the following command in this directory 
+To make sure `project` script is executable run the following command in this directory.
 
 `chmod +x project`
 
